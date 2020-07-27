@@ -58,7 +58,7 @@ export const sidebar = (s: State): any => {
               rel: 'noreferrer',
               target: '_blank'
             },
-            text('Hyprapp Projects')
+            text('Hyperapp Projects')
           )
         )
       ]),
