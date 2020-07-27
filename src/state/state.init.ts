@@ -38,7 +38,7 @@ export const INITIAL_STATE: State = {
     error: null
   },
 
-  pageAccordeon: { ...(LOCAL_STORAGE_STATE.pageAccordeon || {}) },
+  pageAccordion: { ...(LOCAL_STORAGE_STATE.pageAccordion || {}) },
 
   pageToggle: {
     ...(LOCAL_STORAGE_STATE.pageToggle || {

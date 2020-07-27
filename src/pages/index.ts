@@ -1,4 +1,4 @@
-export * from './accordeon'
+export * from './accordion'
 export * from './async'
 export * from './connection'
 export * from './counter'

@@ -4,12 +4,12 @@ import { Heading } from '../components/heading'
 import { Layout } from '../components/layout'
 import { State } from '../state'
 
-export function AccordeonPage(s: State) {
+export function AccordionPage(s: State) {
   const page = () =>
-    h('div', { class: 'accordeon-sample' }, [
+    h('div', { class: 'accordion-sample' }, [
       Heading(
-        'Accordeon',
-        'This is a basic accordeon that allows multiple cards open simultaneously.'
+        'Accordion',
+        'This is a basic accordion that allows multiple cards open simultaneously.'
       ),
       Container(s)
     ])
@@ -33,11 +33,11 @@ function Container(s: State) {
     }
   ]
 
-  return html`<div class="accordeon">
+  return html`<div class="accordion">
     ${items.map(
       (item, idx) =>
         html`
-          <details ${{ ...{ open: s.pageAccordeon[idx] } }}>
+          <details ${{ ...{ open: s.pageAccordion[idx] } }}>
             <summary onclick=${Toggle(idx)}>
               ${item.q}
               <span
@@ -61,7 +61,7 @@ function Container(s: State) {
     )}
     <br />
     <br />
-    <p>State: ${JSON.stringify(s.pageAccordeon)}</p>
+    <p>State: ${JSON.stringify(s.pageAccordion)}</p>
   </div>`
 }
 
@@ -69,9 +69,9 @@ function Toggle(idx: number) {
   return (s: State) => {
     return {
       ...s,
-      pageAccordeon: {
-        ...s.pageAccordeon,
-        [String(idx)]: !s.pageAccordeon[String(idx)]
+      pageAccordion: {
+        ...s.pageAccordion,
+        [String(idx)]: !s.pageAccordion[String(idx)]
       }
     }
   }

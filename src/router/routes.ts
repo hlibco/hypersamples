@@ -1,5 +1,5 @@
 import {
-  AccordeonPage,
+  AccordionPage,
   AsyncPage,
   ConnectionPage,
   CounterPage,
@@ -19,7 +19,7 @@ export const routes = {
     '/todo': ToDoPage,
     '/modal': ModalPage,
     '/toggle': TogglePage,
-    '/accordeon': AccordeonPage,
+    '/accordion': AccordionPage,
     '/async': AsyncPage,
     '/connection': ConnectionPage,
     '/lazy': {

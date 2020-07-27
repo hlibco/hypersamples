@@ -12,7 +12,7 @@ export const sidebar = (s: State): any => {
     ['/todo', 'To-do List'],
     ['/modal', 'Modal'],
     ['/toggle', 'Toggle'],
-    ['/accordeon', 'Accordeon'],
+    ['/accordion', 'Accordion'],
     ['/async', 'Async'],
     ['/connection', 'Connection'],
     ['/lazy', 'Lazy']

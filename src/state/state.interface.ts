@@ -25,7 +25,7 @@ export interface State {
     response: any
     error: any
   }
-  pageAccordeon: { [idx: string]: boolean }
+  pageAccordion: { [idx: string]: boolean }
   pageToggle: {
     light: boolean
     ios: boolean
