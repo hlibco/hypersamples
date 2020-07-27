@@ -1,0 +1,7 @@
+# Netlify redirects file
+
+# Redirect 404s to index.html (404 should be handled by client)
+/* /index.html 200
+
+# Redirect default Netlify subdomain to primary domain
+https://myapp.netlify.com/* https://myapp.dev/:splat 301!

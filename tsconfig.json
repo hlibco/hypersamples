@@ -1,0 +1,40 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": "./",
+    "declaration": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "jsxFactory": "h",
+    "isolatedModules": true,
+    "lib": [
+      "es2017",
+      "dom",
+      "es2015.generator",
+      "es2015.iterable",
+      "es2015.promise",
+      "es2015.symbol",
+      "es2015.symbol.wellknown",
+      "esnext.asynciterable"
+    ],
+    "module": "ES2015",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "noImplicitThis": false,
+    "rootDir": "./src",
+    "strictNullChecks": true,
+    "pretty": true,
+    "sourceMap": false,
+    "strict": true,
+    "target": "ES2015",
+    "typeRoots": ["node_modules/@types", "src/@types"]
+  },
+  "exclude": ["dist", "node_modules"],
+  "include": ["src", "test"]
+}

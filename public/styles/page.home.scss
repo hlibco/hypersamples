@@ -1,0 +1,39 @@
+.home-page {
+  li {
+    line-height: 1.75;
+    overflow: hidden;
+
+    img {
+      display: block;
+      float: left;
+      height: 18px;
+      margin-right: 8px;
+      margin-top: 6px;
+      width: 18px;
+    }
+  }
+
+  p {
+    color: #444;
+    font-size: 18px;
+    b {
+      // color: $color-purple;
+      color: #000;
+    }
+  }
+
+  .story {
+    padding-top: 18px;
+    p {
+      font-family: 'Roboto', sans-serif;
+    }
+  }
+
+  .features {
+    font-family: 'Roboto', sans-serif;
+    .feature {
+      color: $color-green-dark;
+      display: block;
+    }
+  }
+}

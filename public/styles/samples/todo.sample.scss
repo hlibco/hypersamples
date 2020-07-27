@@ -1,0 +1,22 @@
+.todo-form {
+  .todo-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 8px;
+    padding: 8px 0;
+
+    span {
+      padding-right: 12px;
+
+      svg {
+        margin-bottom: -3px;
+      }
+    }
+  }
+  .todo-item--done {
+    text-decoration: line-through;
+
+    span {
+      color: $color-green-dark;
+    }
+  }
+}

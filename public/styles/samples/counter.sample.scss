@@ -1,0 +1,20 @@
+.counter {
+  overflow: hidden;
+  width: 240px;
+  .display {
+    background: #eee;
+    border-radius: 4px;
+    font-size: 28px;
+    margin-bottom: 12px;
+    margin-right: 28px;
+    padding: 8px 12px;
+    text-align: center;
+  }
+  button {
+    color: #fff;
+    display: block;
+    float: left;
+    font-size: 18px;
+    margin-right: 12px;
+  }
+}

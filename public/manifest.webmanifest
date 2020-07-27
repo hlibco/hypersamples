@@ -1,0 +1,25 @@
+{
+  "background_color": "#ffffff",
+  "description": "simple crud todo app",
+  "dir": "ltr",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "images/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "lang": "en",
+  "name": "HyperSamples",
+  "orientation": "portrait",
+  "scope": "./",
+  "short_name": "Hyperapp",
+  "start_url": ".",
+  "theme_color": "#ffffff"
+}

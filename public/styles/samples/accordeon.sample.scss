@@ -1,0 +1,88 @@
+.accordeon {
+  max-width: 600px;
+  details {
+    min-height: 5px;
+    max-width: 700px;
+    padding: 24px 24px 24px 24px;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: all 0.3s;
+  }
+
+  details + details {
+    margin-top: 20px;
+  }
+
+  details[open] {
+    min-height: 50px;
+    background-color: #f6f7f8;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  details p {
+    color: #96999d;
+    font-weight: 300;
+  }
+
+  summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+
+    span {
+      font-size: 24px;
+    }
+  }
+
+  summary:focus {
+    outline: none;
+    box-shadow: 0;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .control-icon {
+    fill: rebeccapurple;
+    transition: 0.3s ease;
+    pointer-events: none;
+  }
+
+  .control-icon-close {
+    display: none;
+  }
+
+  details[open] .control-icon-close {
+    display: initial;
+    transition: 0.3s ease;
+  }
+
+  details[open] .control-icon-expand {
+    display: none;
+  }
+
+  details[open] summary:hover::after {
+    animation: pulse 1s ease;
+  }
+
+  @keyframes pulse {
+    25% {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(1);
+    }
+    75% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
