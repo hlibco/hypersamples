@@ -6,8 +6,9 @@ import { State } from './state.interface'
 const LOCAL_STORAGE_STATE = getStateFromLocalStorage()
 
 export const INITIAL_STATE: State = {
-  clone(): State {
-    return clone()(this)
+  merge(mergeFx): State {
+    const s = clone()(this)
+    return (mergeFx && mergeFx(s)) || s
   },
   router: Hyperway.init() as Router,
 

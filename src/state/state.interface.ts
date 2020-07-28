@@ -2,7 +2,7 @@ import { Router } from 'hyperway'
 
 // This is how the global state of the application looks like.
 export interface State {
-  clone: () => State
+  merge: (mergeFx?: (s: State) => void) => State
 
   router: Router
   lastUpdate: number

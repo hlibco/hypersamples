@@ -4,4 +4,4 @@
 /* /index.html 200
 
 # Redirect default Netlify subdomain to primary domain
-https://myapp.netlify.com/* https://myapp.dev/:splat 301!
+https://www.hypersamples.dev/* https://hypersamples.dev/:splat 301!

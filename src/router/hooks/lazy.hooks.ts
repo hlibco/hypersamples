@@ -2,11 +2,12 @@ import { State } from '../../state'
 import { mockHttpEffect } from '../../utils/mockHttpEffect'
 
 export function onEnter(state: State) {
-  const newState = state.clone()
-  newState.pageLazy.colorsLoading = true
-  newState.pageLazy.planetsLoading = true
-  newState.pageLazy.colors = []
-  newState.pageLazy.planets = []
+  const newState = state.merge((s) => {
+    s.pageLazy.colorsLoading = true
+    s.pageLazy.planetsLoading = true
+    s.pageLazy.colors = []
+    s.pageLazy.planets = []
+  })
 
   const propsColors = {
     successHandler: ColorsSuccessResponse,
@@ -16,20 +17,6 @@ export function onEnter(state: State) {
       ok: true,
       colors: ['yellow', 'green', 'blue', 'pink']
     }
-  }
-
-  function ColorsSuccessResponse(s: State, response) {
-    const nS = s.clone()
-    nS.pageLazy.colors = response.colors
-    nS.pageLazy.colorsLoading = false
-    return nS
-  }
-
-  function ColorsErrorResponse(s: State, error) {
-    const nS = s.clone()
-    nS.pageLazy.colors = []
-    nS.pageLazy.colorsLoading = false
-    return nS
   }
 
   const propsPlanets = {
@@ -42,22 +29,6 @@ export function onEnter(state: State) {
     }
   }
 
-  function PlanetsSuccessResponse(s: State, response) {
-    const nS = s.clone()
-    nS.pageLazy.planets = response.planets
-    nS.pageLazy.planetsLoading = false
-    console.log({ nS })
-    return nS
-  }
-
-  function PlanetsErrorResponse(s: State, error) {
-    const nS = s.clone()
-    nS.pageLazy.planets = []
-    nS.pageLazy.planetsLoading = false
-    console.log({ nS })
-    return nS
-  }
-
   return [
     newState,
     [mockHttpEffect, propsColors],
@@ -68,4 +39,32 @@ export function onEnter(state: State) {
 export function onLeave(state, props) {
   console.log('leave /lazy', props)
   return state
+}
+
+function ColorsSuccessResponse(state: State, response) {
+  return state.merge((s) => {
+    s.pageLazy.colors = response.colors
+    s.pageLazy.colorsLoading = false
+  })
+}
+
+function ColorsErrorResponse(state: State, error) {
+  return state.merge((s) => {
+    s.pageLazy.colors = []
+    s.pageLazy.colorsLoading = false
+  })
+}
+
+function PlanetsSuccessResponse(state: State, response) {
+  return state.merge((s) => {
+    s.pageLazy.planets = response.planets
+    s.pageLazy.planetsLoading = false
+  })
+}
+
+function PlanetsErrorResponse(state: State, error) {
+  return state.merge((s) => {
+    s.pageLazy.planets = []
+    s.pageLazy.planetsLoading = false
+  })
 }

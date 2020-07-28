@@ -5363,6 +5363,11 @@ picomatch@^2.0.4, picomatch@^2.0.5, picomatch@^2.2.1:
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.2.2.tgz#21f333e9b6b8eaff02468f5146ea406d345f4dad"
   integrity sha512-q0M/9eZHzmr0AulXyPwNfZjtwZ/RBZlbN3K3CErVrk50T2ASYI7Bye0EvekFY3IP1Nt2DHu0re+V2ZHIpMkuWg==
 
+picostyle@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/picostyle/-/picostyle-2.2.0.tgz#c013aff511d0658867b9a445e88baf56b035a8ae"
+  integrity sha512-hkP+80H9dRxXjG3a6/tz3xa7q9imnZM7TAXE+nlbmHo0MbALGOdwwUW1KrSEIN9Dk4nUyxT+vDk/fqBCQh2BCQ==
+
 pirates@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/pirates/-/pirates-4.0.1.tgz#643a92caf894566f91b2b986d2c66950a8e2fb87"
