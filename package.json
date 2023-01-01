@@ -31,7 +31,7 @@
     "hyperapp": "2.0.8",
     "hyperlit": "0.3.5",
     "hyperway": "git+https://git@github.com/hlibco/hyperway.git",
-    "json5": "2.1.3",
+    "json5": "2.2.2",
     "picostyle": "2.2.0",
     "rfdc": "1.1.4"
   },
